@@ -23,14 +23,14 @@ brand_input[brand_columns.index(f'Brand_{brand}')] = 1
 
 input_data = np.array([speed, ram, storage, screen_size, weight,] + brand_input).reshape(1, -1)
 
-currency = st.selectbox("Currency", ['🇷🇺 RUB', '🇸🇬 SGD'])
+currency = st.selectbox("Currency", ['Russian Rubles', 'Singapore Dollars'])
 
 rates = {
-    '🇷🇺 RUB': 1,
-    '🇸🇬 SGD': 0.013
+    'Russian Rubles': 1,
+    'Singapore Dollars': 0.013
 }
 
 if st.button("Predict"):
     prediction = model.predict(input_data)
     conversion = prediction * rates[currency]
-    st.write(f"Predicted Price: ${prediction[0]:,.2f}")
+    st.write(f"Predicted Price: ${conversion[0]:,.2f}")
