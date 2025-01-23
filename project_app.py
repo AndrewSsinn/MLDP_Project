@@ -7,7 +7,7 @@ model = joblib.load('gradient_boosting_model.pkl')
 
 gif_url = 'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTMxZ2xxNXF1cmgzb2JpNm5qYjhqdnNxdzR1cHc5NzdpaHJkZ29tbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5Zesu5VPNGJlm/giphy.gif'
 st.image(gif_url, width=700)
-st.title("💻 Ah Lim Laptop Price Predictions")
+st.title("💻Laptop Price Predictions💻")
 with st.sidebar:
     with st.expander("Laptop Specs ", expanded=True):
         brand = st.selectbox("Brand", ['Acer', 'Asus', 'Dell', 'HP', 'Lenovo'])
